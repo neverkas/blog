@@ -1,1 +1,6 @@
-{{outlet}}
+{{#each post in model}}
+	{{#link-to 'post'}}	
+		{{post.title}}
+			<i>{{post.author.name}}</i>
+	{{/link-to}}
+{{/each}}
