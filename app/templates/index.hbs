@@ -1,20 +1,7 @@
 <div class="col s6">
-	<div class="row">
-		{{#each post in model.posts}}
-		<p>
-			<b>{{post.title}}</b>
-			Author: <i>{{post.author.name}}</i><br />
-		</p>
-		{{/each}}
-	</div>
+	{{partial "post/index"}}
 
-	<div class="row">
-		{{#each category in model.categories}}
-		<p>
-			<b>{{category.name}}</b>
-		</p>
-		{{/each}}
-	</div>
+	{{partial "category/index"}}
 </div>
 
 {{outlet}}

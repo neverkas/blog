@@ -1,0 +1,8 @@
+<div class="row">
+	{{#each post in model.posts}}
+	<p>
+		<b>{{post.title}}</b>
+		Author: <i>{{post.author.name}}</i><br />
+	</p>
+	{{/each}}
+</div>
