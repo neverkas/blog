@@ -3,8 +3,7 @@ import DS from 'ember-data';
 var post = DS.Model.extend({
   title: DS.attr('string'),
   author: DS.belongsTo('author', { async: true }),
-  category: DS.attr('string'),
-  //category: DS.hasMany("category"),
+  category: DS.belongsTo('category'),
 });
 
 post.reopenClass({

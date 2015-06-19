@@ -1,9 +1,17 @@
 <div class="col s6">
 	<div class="row">
-		{{#each post in model}}
+		{{#each post in model.posts}}
 		<p>
 			<b>{{post.title}}</b>
-			<i>{{post.author.name}}</i>
+			Author: <i>{{post.author.name}}</i><br />
+		</p>
+		{{/each}}
+	</div>
+
+	<div class="row">
+		{{#each category in model.categories}}
+		<p>
+			<b>{{category.name}}</b>
 		</p>
 		{{/each}}
 	</div>

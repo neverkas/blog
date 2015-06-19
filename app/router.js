@@ -8,5 +8,5 @@ var Router = Ember.Router.extend({
 export default Router.map(function() {
     this.resource("/");
     this.resource("post", {path: '/:post_id'});
-    this.resource("categories");
+    this.resource("category", {path: '/:category_id'});
 });
