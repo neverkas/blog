@@ -1,1 +1,2 @@
-# blog
+# Testeando Ember.js
+# :)
