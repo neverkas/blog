@@ -2,6 +2,9 @@
 	{{#each category in model.categories}}
 	<p>
 		<b>{{category.name}}</b>
+		{{#each post in category.posts}}
+			<p>{{post.title}}</p>
+		{{/each}}
 	</p>
 	{{/each}}
 </div>
