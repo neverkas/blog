@@ -1,0 +1,26 @@
+{{#each post in model.posts}}
+	<div class="col s6">
+	  <div class="card">
+		<div class="card-image waves-effect waves-block waves-light">
+			<img class="activator" src="images/emberjs.png">
+		</div>
+
+		<div class="card-content">
+			<span class="card-title activator grey-text text-darken-4">{{post.title}}</span>
+			<p>{{post.content}}</p>
+			  
+			<p>
+				{{#each keyword in post.keyword}}
+					<b>{{keyword.title}}</b>
+				{{/each}}          	
+			 </p>
+
+			<p>Author: <i>{{post.author.name}}</i></p>
+		</div>
+
+		<div class="card-action">
+			<a href="#">This is a link</a>
+		</div>
+	  </div>
+	</div>
+{{/each}}

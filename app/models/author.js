@@ -4,7 +4,7 @@ var author = DS.Model.extend({
 	name: DS.attr('string'),
 	posts: DS.hasMany('post'),
 });
-
+/*
 author.reopenClass({
 	FIXTURES:[
 		{id: 1, name: 'Author 1', posts: [1]},
@@ -12,5 +12,5 @@ author.reopenClass({
 		{id: 3, name: 'Author 3', posts: [3]},
 	]
 });
-
+*/
 export default author;

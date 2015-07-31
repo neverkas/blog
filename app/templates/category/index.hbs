@@ -1,8 +1,5 @@
-{{#each category in model.categories}}
-<p>
-	<b>{{category.name}}</b>
-	{{#each post in category.posts}}
-		<p>{{post.title}}</p>
+<ul class="collection">
+	{{#each category in model.categories}}
+		<li class="collection-item">{{category.name}}</li>
 	{{/each}}
-</p>
-{{/each}}
+</ul>
