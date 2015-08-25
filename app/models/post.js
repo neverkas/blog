@@ -5,7 +5,8 @@ var post = DS.Model.extend({
   content: DS.attr('string'),
   description: DS.attr('string'),
   
-  author: DS.belongsTo('author', { async: true }),
+  //author: DS.belongsTo('author', { async: true }),
+  author: DS.attr('string'),
   category: DS.hasMany('category', { async: true }),
   keyword: DS.hasMany('keyword', { async: true }),
 });
