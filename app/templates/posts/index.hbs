@@ -1,26 +1,30 @@
-{{#each post in model.posts}}
-	<div class="col s6">
-	  <div class="card">
-		<div class="card-image waves-effect waves-block waves-light">
-			<img class="activator" src="images/emberjs.png">
-		</div>
+{{#if model.posts}}
+	{{#each post in model.posts}}
+		<div class="col s6">
+		  <div class="card">
+			<div class="card-image waves-effect waves-block waves-light">
+				<img class="activator" src="images/emberjs.png">
+			</div>
 
-		<div class="card-content">
-			<span class="card-title activator grey-text text-darken-4">{{post.title}}</span>
-			<p>{{post.content}}</p>
-			  
-			<p>
-				{{#each keyword in post.keyword}}
-					<b>{{keyword.title}}</b>
-				{{/each}}          	
-			 </p>
+			<div class="card-content">
+				<span class="card-title activator grey-text text-darken-4">{{post.title}}</span>
+				<p>{{post.content}}</p>
+				  
+				<p>
+					{{#each keyword in post.keyword}}
+						<b>{{keyword.title}}</b>
+					{{/each}}          	
+				 </p>
 
-			<p>Author: <i>{{post.author.name}}</i></p>
-		</div>
+				<p>Author: <i>{{post.author.name}}</i></p>
+			</div>
 
-		<div class="card-action">
-			{{#link-to 'posts.post' post}}Leer más{{/link-to}}
+			<div class="card-action">
+				{{#link-to 'posts.show' post}}Leer más{{/link-to}}
+			</div>
+		  </div>
 		</div>
-	  </div>
-	</div>
-{{/each}}
+	{{/each}}
+{{else}}
+bep
+{{/if}}

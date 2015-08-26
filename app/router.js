@@ -10,7 +10,7 @@ export default Router.map(function() {
     //this.resource("post", {path: '/:post_id'});
     this.resource("posts", {path: '/posts'}, function(){
 	    //this.route("post", {path: 'post/:post_id'});
-	    this.route("post", {path: '/:post_id'});
+	    this.route("show", {path: '/:post_id'});
     });
     this.resource("category", {path: '/:category_id'});
 });
