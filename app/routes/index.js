@@ -6,7 +6,7 @@ export default Ember.Route.extend({
 	
 		return Ember.RSVP.hash({
 			posts: this.get('store').find('post'),
-			categories: this.get('store').find('category'),
+			//categories: this.get('store').find('category'),
 		});
 	
 	}

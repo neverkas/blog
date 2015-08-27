@@ -16,6 +16,15 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+       minifyHTML: {
+          enabled: true,
+          minifierOptions: {
+              collapseWhitespace : true,
+              removeComments     : true,
+              minifyJS           : true,
+              minifyCSS          : true
+          }
+        }   
     }
   };
 
@@ -25,6 +34,16 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV.contentSecurityPolicy = {
+      'default-src': "'self' http://locahost:4200",
+      'script-src': "'self' http://localhost:4200 http://localhost:35729", // Allow scripts from https://cdn.mxpnl.com
+      'font-src': "'self' http://localhost:4200", // Allow fonts to be loaded from http://fonts.gstatic.com
+      'connect-src': "'self' http://localhost:4200 http://localhost:1337 http://localhost:35729", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline' http://localhost:4200", // Allow inline styles and loaded CSS from http://fonts.googleapis.com 
+      'media-src': "'self'"
+    }
   }
 
   if (environment === 'test') {
