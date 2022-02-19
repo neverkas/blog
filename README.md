@@ -1,0 +1,2 @@
+# DEPRECATED
+# ember-blog
